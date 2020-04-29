@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <script src="js/jquery-3.5.0.js"></script>
+    <title>Insomnio</title>
+</head>
+<body>
+    <div class="login">
+        <div class="sign" id="sign-tab">
+            <div class="sign-in forms">
+                <h2 class="sign-text">Inicia Sesión</h2>
+                <forms id="form">
+                    <div class="form">
+                        <p class="label-info">Ingresa tu correo electrónico y contraseña</p>
+                        <input type="email" placeholder="&#xF1FA; Correo Electronico" class="form-item"  id="email">
+                    </div>
+                    <div class="form">
+                        <input type="password"placeholder="&#Xf023; Contraseña" class="form-item" id="password">
+                    </div>
+                    <div class="form-button">
+                        <input type="submit" class="btn-submit" value="Iniciar Sesión">
+                    </div>
+                </form> 
+            </div>
+            <div class="sign-in forms" style="display: none;">
+                <h2 class="sign-text">Registrarse</h2>
+                <form id="form">
+                    <p class="label-info">Ingresa los elementos requeridos</p>
+                    <div class="form">
+                        <input type="text" placeholder="&#xF007; Nombre Completo" class="form-item" id="email" required>
+                    </div>
+                    <div class="form">
+                        <input type="number" placeholder="&#xf1fd; Edad" class="form-item" minlength="0" maxlength="100" id="edad" required>
+                    </div>
+                    <div class="form">
+                        <input type="email" placeholder="&#xF1FA; Correo Electronico" class="form-item" id="email" required>
+                    </div>
+                    <div class="form">
+                        <input type="password"placeholder="&#Xf023; Contraseña" class="form-item" id="password" required>
+                    </div>
+                    <div class="form-button">
+                        <input type="submit" class="btn-submit" value="Registrarse">
+                    </div>
+                </form> 
+            </div>
+        </div>
+        
+        <div class="reg" id="register-tab">
+            <div class="description">
+                <div class="description-img">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <h2 class="hello">Hola de vuelta</h2>
+                <p class="text-description">Si no tienes una cuenta presiona el boton para registrarte</p>
+                <div class="form-button">
+                    <button type="button" id="login" class="btn-register btn">Registrarme</button>
+                </div>
+            </div>
+            <div class="description" style="display: none;">
+                <div class="description-img">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <h2 class="hello">Bienvenido</h2>
+                <p class="text-description">¿Ya tienes una cuenta? Inicia sesión</p>
+                <div class="form-button">
+                    <button type="button" id="register" class="btn-register btn">Iniciar Sesión</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        
+        var register = $(".btn");
+        var registerTab = $("#register-tab");
+        var signTab = $("#sign-tab");
+
+        register.on("click", function(){
+
+            registerTab.toggleClass("moveWel");
+            signTab.toggleClass("moveTab");
+            $(".forms").fadeToggle(0);
+            $(".description").fadeToggle(0);
+
+        });
+
+
+    </script>
+</body>
+</html>

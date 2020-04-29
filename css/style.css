@@ -1,0 +1,221 @@
+/*Estilos generales*/
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eaeaea;
+}
+
+input{
+    outline-width: 0;
+}
+
+button{
+    outline-width: 0;
+}
+
+/*Login*/
+
+.login{
+    border-radius: 3em;
+    position: relative;
+    display: flex;
+    background-color: white;
+    width: 50%;
+    height: 70%;
+    box-shadow: 0px 0px 20px rgba(0,0,0,.1);
+}
+
+.sign{
+    border-radius: 3em;
+    display: block;
+    transition: all 500ms ease;
+    left: 0%;
+    flex: 60%;
+    position: relative;
+    height: 100%;
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: animateOpaEnd 300ms ease;
+}
+
+.sign-in{
+    display: block;
+    width: 100%;
+}
+
+.sign-text{
+    color:  rgb(255, 110, 110);
+    text-align: center;
+}
+
+.label-info{
+    margin: 20px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #8b8b8b;
+}
+
+.form-item{
+    font-family:Arial, FontAwesome;
+    background-color: #eaeaea;
+    margin: 10px 0;
+    border-radius: 2em;
+    border: none;
+    padding: 15px 20px;
+    width: 100%;
+    transition: border 300ms ease;
+}
+
+.form-item:focus{
+    outline-width: 0;
+    border: 2px solid rgba(140, 140, 140, .5);
+}
+
+.form-button{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.btn-submit{
+    cursor: pointer;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 2em;
+    border: none;
+    background-color: rgb(255, 110, 110);
+    transition: background-color 300ms ease;
+}
+
+.btn-submit:hover{
+    background-color: rgb(255, 88, 88);
+}
+
+.reg{
+    border-top-right-radius: 3em;
+    border-bottom-right-radius: 3em;
+    transition: all 500ms ease;
+    right: 0;
+    position: relative;
+    flex: 40%;
+    background: linear-gradient(rgb(255, 110, 110), rgb(255, 181, 181));
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    animation: animateEnd 500ms ease;
+    
+}
+
+.description-img{
+    display: flex;
+    justify-content: center;
+}
+
+.description-img > *{
+    width: 40%;
+}
+
+.hello{
+    margin: 20px 0;
+    text-align: center;
+    color: white;
+}
+
+.text-description{
+    margin: 15px 0;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+}
+
+.btn-register{
+    transition: background-color 300ms ease;
+    cursor: pointer;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 2em;
+    border: 2px solid white;
+    background-color: transparent;
+}
+
+.btn-register:hover{
+    background-color: rgb(255, 181, 181);
+
+}
+
+.moveTab{
+    left: 40%;
+    animation: animateOpaStart 300ms ease;
+}
+
+.moveWel{
+    border-top-right-radius: 0em;
+    border-bottom-right-radius: 0em;
+    border-top-left-radius: 3em;
+    border-bottom-left-radius: 3em;
+    right: 60%;
+    animation: animateStart 500ms ease;
+}
+
+@keyframes animateStart{
+    0%{
+        flex: 40%;
+    }
+    50%{
+        flex: 70%;
+    }
+    100%{
+        flex: 40%;
+    }
+}
+
+@keyframes animateEnd{
+    0%{
+        flex: 40%;
+    }
+    50%{
+        flex: 70%;
+    }
+    100%{
+        flex: 40%;
+    }
+}
+
+@keyframes animateOpaStart{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes animateOpaEnd{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
