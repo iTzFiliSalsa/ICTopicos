@@ -1,0 +1,344 @@
+<%@ Page Inherits="Microsoft.SharePoint.WebPartPages.WebPartPage, Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" MasterPageFile="~masterurl/default.master" Language="C#" meta:progid="SharePoint.WebPartPage.Document" meta:webpartpageexpansion="full" %>
+<%@ Register TagPrefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register TagPrefix="Utilities" Namespace="Microsoft.SharePoint.Utilities" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register TagPrefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%-- The markup and script in the following Content element will be placed in the <head>
+<meta name="WebPartPageExpansion" content="full" />
+<meta name="WebPartPageExpansion" content="full" />
+<meta name="WebPartPageExpansion" content="full" /> of the page --%>
+<asp:Content ContentPlaceHolderID="PlaceHolderAdditionalPageHead" runat="server" Visible="false">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+<link type="text/css" rel="stylesheet" href="/SiteAssets/Development/CSS/cleanSp.css"/>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
+<link type="text/css" rel="stylesheet" href="../../Insomnio/SiteAssets/CSS/style.css"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+	
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="PlaceHolderMain" runat="server" Visible="false">
+<asp:ScriptManagerProxy runat="server" id="ScriptManagerProxy">
+</asp:ScriptManagerProxy>
+
+<div class="father">
+
+
+	<div class="login">
+        <div class="sign" id="sign-tab">
+            <div class="sign-in forms">
+                <h2 class="sign-text">Inicia Sesión</h2>
+                <form id="form">
+                    <div class="form">
+                        <p class="label-info">Ingresa tu correo electrónico y 
+						contraseña</p>
+                        <input type="email" placeholder="&#xF1FA; Correo Electronico" class="form-item"  id="loginEmail"/>
+                    </div>
+                    <div class="form">
+                        <input type="password"placeholder="&#Xf023; Contraseña" class="form-item" id="loginPassword"/>
+                    </div>
+                    <div class="form-button">
+                        <input type="button" id="loginBtn" class="btn-submit" value="Iniciar Sesión"/>
+                    </div>
+                </form> 
+            </div>
+            <div class="sign-in forms" style="display: none;">
+                <h2 class="sign-text">Registrarse</h2>
+                
+                <WebPartPages:DataFormWebPart runat="server" IsIncluded="True" FrameType="None" NoDefaultStyle="TRUE" ViewFlag="8" Title="Usuarios" PageType="PAGE_NEWFORM" ListName="{4B5215D9-AF56-4746-BE24-D92154CB9B0A}" Default="FALSE" DisplayName="Usuarios" __markuptype="vsattributemarkup" __WebPartId="{62196843-F038-4479-A985-A961D94ACDFB}" id="g_62196843_f038_4479_a985_a961d94acdfb" __AllowXSLTEditing="true" WebPart="true" Height="" Width="">
+	<DataSources>
+		<SharePoint:SPDataSource runat="server" DataSourceMode="ListItem" UseInternalName="true" UseServerDataFormat="True" selectcommand="&lt;View&gt;&lt;Query&gt;&lt;Where&gt;&lt;Eq&gt;&lt;FieldRef Name=&quot;ContentType&quot;/&gt;&lt;Value Type=&quot;Text&quot;&gt;Elemento&lt;/Value&gt;&lt;/Eq&gt;&lt;/Where&gt;&lt;/Query&gt;&lt;/View&gt;" id="Usuarios2"><SelectParameters><WebPartPages:DataFormParameter Name="ListItemId" ParameterKey="ListItemId" PropertyName="ParameterValues" DefaultValue="0"/><WebPartPages:DataFormParameter Name="ListID" ParameterKey="ListID" PropertyName="ParameterValues" DefaultValue="{4B5215D9-AF56-4746-BE24-D92154CB9B0A}"/><WebPartPages:DataFormParameter Name="MaximumRows" ParameterKey="MaximumRows" PropertyName="ParameterValues" DefaultValue="10"/></SelectParameters><DeleteParameters><WebPartPages:DataFormParameter Name="ListItemId" ParameterKey="ListItemId" PropertyName="ParameterValues" DefaultValue="0"/><WebPartPages:DataFormParameter Name="ListID" ParameterKey="ListID" PropertyName="ParameterValues" DefaultValue="{4B5215D9-AF56-4746-BE24-D92154CB9B0A}"/></DeleteParameters><InsertParameters><WebPartPages:DataFormParameter Name="ListItemId" ParameterKey="ListItemId" PropertyName="ParameterValues" DefaultValue="0"/><WebPartPages:DataFormParameter Name="ListID" ParameterKey="ListID" PropertyName="ParameterValues" DefaultValue="{4B5215D9-AF56-4746-BE24-D92154CB9B0A}"/></InsertParameters><UpdateParameters><WebPartPages:DataFormParameter Name="ListItemId" ParameterKey="ListItemId" PropertyName="ParameterValues" DefaultValue="0"/><WebPartPages:DataFormParameter Name="ListID" ParameterKey="ListID" PropertyName="ParameterValues" DefaultValue="{4B5215D9-AF56-4746-BE24-D92154CB9B0A}"/></UpdateParameters></SharePoint:SPDataSource>
+	</DataSources>
+	<ParameterBindings>
+					<ParameterBinding Name="ListItemId" Location="QueryString(ID)" DefaultValue="0"/>
+					<ParameterBinding Name="ListID" Location="None" DefaultValue="{4B5215D9-AF56-4746-BE24-D92154CB9B0A}"/>
+					<ParameterBinding Name="MaximumRows" Location="None" DefaultValue="10"/>
+					<ParameterBinding Name="dvt_apos" Location="Postback;Connection"/>
+					<ParameterBinding Name="ManualRefresh" Location="WPProperty[ManualRefresh]"/>
+					<ParameterBinding Name="UserID" Location="CAMLVariable" DefaultValue="CurrentUserName"/>
+					<ParameterBinding Name="Today" Location="CAMLVariable" DefaultValue="CurrentDate"/>
+				</ParameterBindings>
+	<datafields>@Title,Nombre Paciente;@m1q4,Edad;@pguk,Email;@zops,Contrasena;@ID,ID;@ContentType,Tipo de contenido;@Modified,Modificado;@Created,Creado;@Author,Creado por;@Editor,Modificado por;@_UIVersionString,Versión;@Attachments,Datos adjuntos;@File_x0020_Type,Tipo de archivo;@FileLeafRef,Nombre (para uso en formularios);@FileDirRef,Ruta de acceso;@FSObjType,Tipo de elemento;@_HasCopyDestinations,Tiene destinos de copia;@_CopySource,Copiar origen;@ContentTypeId,Id. de tipos de contenido;@_ModerationStatus,Estado de aprobación;@_UIVersion,Versión de IU;@Created_x0020_Date,Creado;@FileRef,Dirección URL;@ItemChildCount,Número secundario de elemento;@FolderChildCount,Recuento secundario de carpetas;@AppAuthor,Aplicación creada por;@AppEditor,Aplicación modificada por;</datafields>
+	<XSL>
+<xsl:stylesheet xmlns:x="http://www.w3.org/2001/XMLSchema" xmlns:dsp="http://schemas.microsoft.com/sharepoint/dsp" version="1.0" exclude-result-prefixes="xsl msxsl ddwrt" xmlns:ddwrt="http://schemas.microsoft.com/WebParts/v2/DataView/runtime" xmlns:asp="http://schemas.microsoft.com/ASPNET/20" xmlns:__designer="http://schemas.microsoft.com/WebParts/v2/DataView/designer" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:SharePoint="Microsoft.SharePoint.WebControls" xmlns:ddwrt2="urn:frontpage:internal">
+	<xsl:output method="html" indent="no"/>
+	<xsl:decimal-format NaN=""/>
+	<xsl:param name="dvt_apos">&apos;</xsl:param>
+	<xsl:param name="ManualRefresh"></xsl:param>
+	<xsl:variable name="dvt_1_automode">0</xsl:variable>
+	<xsl:template match="/" xmlns:x="http://www.w3.org/2001/XMLSchema" xmlns:dsp="http://schemas.microsoft.com/sharepoint/dsp" xmlns:asp="http://schemas.microsoft.com/ASPNET/20" xmlns:__designer="http://schemas.microsoft.com/WebParts/v2/DataView/designer" xmlns:SharePoint="Microsoft.SharePoint.WebControls">
+		<xsl:choose>
+			<xsl:when test="($ManualRefresh = 'True')">
+							<xsl:call-template name="dvt_1"/>
+							</xsl:when>
+			<xsl:otherwise>
+				<xsl:call-template name="dvt_1"/>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:template>
+	
+	<xsl:template name="dvt_1">
+		<xsl:variable name="Rows" select="/dsQueryResponse/Rows/Row"/>
+		<div>
+					<xsl:call-template name="dvt_1.body">
+					</xsl:call-template>
+			<SharePoint:AttachmentUpload runat="server" Visible="false" ControlMode="New"/>
+			<SharePoint:ItemHiddenVersion runat="server" ControlMode="New"/>
+		</div>
+	</xsl:template>
+	<xsl:template name="dvt_1.body">
+		<xsl:param name="Rows"/>
+		<xsl:call-template name="dvt_1.rowedit">
+			<xsl:with-param name="Pos" select="concat('_', position())" />
+		</xsl:call-template>
+	
+	
+	<div class="form-button" id="registerbtn">
+		<input type="button" value="Guardar" class="btn-submit btn-disabled" name="btnSave1" onclick="javascript: {ddwrt:GenFireServerEvent('__commit;__redirect={http://sp.ictopicos.com/Insomnio/SitePages/Home.aspx}')}" />
+		<!--<SharePoint:SaveButton CssClass="btn-submit" runat="server" ControlMode="New" id="savebutton2"/>-->
+	</div>
+
+	</xsl:template>
+	
+	<xsl:template name="dvt_1.rowedit">
+		<xsl:param name="Pos" select="position()"/>
+		<p class="label-info">Ingresa los elementos requeridos</p>
+		<div id="imform">
+			<SharePoint:FormField runat="server" id="ff1{$Pos}" ControlMode="New" FieldName="Title" __designer:bind="{ddwrt:DataBind('i',concat('ff1',$Pos),'Value','ValueChanged','ID',ddwrt:EscapeDelims(string(@ID)),'@Title')}"/>
+			<SharePoint:FieldDescription runat="server" id="ff1description{$Pos}" FieldName="Title" ControlMode="New"/>
+			<SharePoint:FormField runat="server" id="ff2{$Pos}" ControlMode="New" FieldName="m1q4" __designer:bind="{ddwrt:DataBind('i',concat('ff2',$Pos),'Value','ValueChanged','ID',ddwrt:EscapeDelims(string(@ID)),'@m1q4')}" />
+			<SharePoint:FormField runat="server" id="ff3{$Pos}" ControlMode="New" FieldName="pguk" __designer:bind="{ddwrt:DataBind('i',concat('ff3',$Pos),'Value','ValueChanged','ID',ddwrt:EscapeDelims(string(@ID)),'@pguk')}" />
+			<SharePoint:FieldDescription runat="server" id="ff3description{$Pos}" FieldName="pguk" ControlMode="New" />
+			<SharePoint:FormField runat="server" id="ff4{$Pos}" ControlMode="New" FieldName="zops" __designer:bind="{ddwrt:DataBind('i',concat('ff4',$Pos),'Value','ValueChanged','ID',ddwrt:EscapeDelims(string(@ID)),'@zops')}" />
+			<SharePoint:FieldDescription runat="server" id="ff4description{$Pos}" FieldName="zops" ControlMode="New" />					
+			</div>		
+	</xsl:template>
+	
+</xsl:stylesheet>	</XSL>
+</WebPartPages:DataFormWebPart>
+                
+                <!--<form id="form">
+                    <p class="label-info">Ingresa los elementos requeridos</p>
+                    <div class="form">
+                        <input type="text" placeholder="&#xF007; Nombre Completo" class="form-item" id="email" required>
+                    </div>
+                    <div class="form">
+                        <input type="number" placeholder="&#xf1fd; Edad" class="form-item" minlength="0" maxlength="100" id="edad" required>
+                    </div>
+                    <div class="form">
+                        <input type="email" placeholder="&#xF1FA; Correo Electronico" class="form-item" id="email" required>
+                    </div>
+                    <div class="form">
+                        <input type="password"placeholder="&#Xf023; Contraseña" class="form-item" id="password" required>
+                    </div>
+                    <div class="form-button">
+                        <input type="submit" class="btn-submit" value="Registrarse">
+                    </div>
+                </form>--> 
+            </div>
+        </div>
+        
+               
+        <div class="reg" id="register-tab">
+            <div class="description">
+                <div class="description-img">
+                    <img src="../SiteAssets/IMG/logo.png" alt=""/>
+                </div>
+                <h2 class="hello">Hola de vuelta</h2>
+                <p class="text-description">Si no tienes una cuenta presiona el 
+				boton para registrarte</p>
+                <div class="form-button">
+                    <button type="button" id="login" class="btn-register btn">
+					Registrarme</button>
+                </div>
+            </div>
+            <div class="description" style="display: none;">
+                <div class="description-img">
+                    <img src="../SiteAssets/IMG/logo.png" alt=""/>
+                </div>
+                <h2 class="hello">Bienvenido</h2>
+                <p class="text-description">¿Ya tienes una cuenta? Inicia sesión</p>
+                <div class="form-button">
+                    <button type="button" id="register" class="btn-register btn">
+					Iniciar Sesión</button>
+                </div>
+            </div>
+        </div>
+ <div class="modal fade" id="exampleModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Intentalo de nuevo </h5>
+             </div>
+      <div class="modal-body">
+        Los datos de inicio de sesión son incorrectos
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-modal" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+    <script src="../../Insomnio/SiteAssets/JS/jquery-3.5.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="/SiteAssets/Development/intranet.js" type="text/javascript"></script>
+	<script>
+	
+	//Login Script
+	var lEmail = $("#loginEmail");
+	var lPass = $("#loginPassword");
+
+	function querys(){
+		var found = true;
+		SiteSP = _spPageContextInfo.webAbsoluteUrl;
+		ListName = 'Usuarios';
+	    query = "?$select=pguk,zops";
+	    QueryList(SiteSP, ListName, query, function (data) {
+		$AllQuestions = data.results;
+			for(var i in $AllQuestions){
+				if(lEmail.val() == $AllQuestions[i].pguk && lPass.val() == $AllQuestions[i].zops){
+					found = false;
+					alert("Se encontro el usuario");
+					return false;
+				}
+		    }
+		    if(found){ $('#exampleModal').modal('show');}
+	    });
+	       
+	}
+	
+	function verify(lEmail, lPass){
+		if(lEmail.val() && lPass.val()){
+			querys();
+		}else{
+			alert("Llenar todos los datos");
+		}
+	}
+	
+	$("#loginBtn").on("click",() => {
+		verify(lEmail, lPass);
+	});
+	
+	//Register Script
+	
+	 $("input[name='btnSave1']").prop("disabled", true);
+                
+        /*function newPerson(){
+	        var ban = 0;
+	        
+	        if(age.val()){ age.removeClass("invalid"); ban++; }else{ age.addClass("invalid"); }
+	        if(nameC.val()){ nameC.removeClass("invalid"); ban++; }else{ nameC.addClass("invalid"); }
+	        if(email.val()){ email.removeClass("invalid"); ban++; }else{ email.addClass("invalid"); }
+			if(pass.val()){ pass.removeClass("invalid"); ban++; }else{ pass.addClass("invalid"); }
+	
+			if(ban == 4) {
+				if (!PreSaveItem()){
+	        		return false;
+	        	}
+	     	 	
+	        	WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions('ctl00$PlaceHolderMain$g_62196843_f038_4479_a985_a961d94acdfb$savebutton2$ctl00$diidIOSaveItem','',true,'','Home.aspx',false,true));
+	        	//ddwrt:GenFireServerEvent('__commit;__redirect={/Insomnio/SitePages/Inicio.aspx}');
+	        }
+		}*/
+		
+		function validateEmail(email) {
+		    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		    return re.test(String(email).toLowerCase());
+		}
+		
+		setInterval(() => {
+			if( age.val() && nameC.val() && validateEmail(email.val()) && pass.val()){
+				//$("name='ctl00$PlaceHolderMain$g_62196843_f038_4479_a985_a961d94acdfb$savebutton2$ctl00$diidIOSaveItem'").prop("disabled","false");
+				$("input[name='btnSave1']")
+							.prop("disabled", false)
+							.removeClass("btn-disabled");
+			}else{
+				$("input[name='btnSave1']")
+							.prop("enabled", false)
+							.addClass("btn-disabled");
+			}
+		},100); 
+		
+        var register = $(".btn");
+        var registerTab = $("#register-tab");
+        var signTab = $("#sign-tab");
+        var nameC = $("input[title='Nombre Paciente Campo requerido']");
+        var age = $("input[title='Edad']");
+        var email = $("input[title='Email']");
+        var pass = $("input[title='Contrasena']");
+        
+        register.on("click", function(){
+            registerTab.toggleClass("moveWel");
+            signTab.toggleClass("moveTab");
+            $(".forms").fadeToggle(0);
+            $(".description").fadeToggle(0);
+
+        });
+
+		nameC.attr({
+				"placeholder":"Nombre Completo",
+				'class': 'form-item'
+				}).prop('required', true);
+		
+		age.attr({
+				'placeholder': 'Edad',
+				'type': 'number',
+				'class': 'form-item'
+				}).prop('required', true);
+				
+		email.attr({
+				"placeholder": "Correo Electrónico",
+				'class': 'form-item'
+				}).prop('required', true);
+				
+		pass.attr({
+				"placeholder": "Contraseña",
+				'class': 'form-item'
+				}).prop('required', true);
+				
+		
+		/*$("#registerbtn").html(`<input type="button"
+								name="ctl00$PlaceHolderMain$g_62196843_f038_4479_a985_a961d94acdfb$savebutton2$ctl00$diidIOSaveItem"
+								value="Guardar"
+								onclick="newPerson()"
+								id="ctl00_PlaceHolderMain_g_62196843_f038_4479_a985_a961d94acdfb_savebutton2_ctl00_diidIOSaveItem"
+								accesskey="O"
+								disabled
+								class="btn-submit btn-disabled"
+								target="_self">`);
+								*/
+								
+		/*Input Events*/
+								
+		nameC.on("input", () => { nameC.removeClass("invalid");});
+		age.on("input", () => { age.removeClass("invalid"); });
+		email.on("input", () => {
+			if(validateEmail(email.val())){
+				email.removeClass("invalid");
+			}else{
+				email.addClass("invalid");
+			}
+		});
+		pass.on("input", () => { pass.removeClass("invalid"); });
+		
+		/*FocutsOut*/
+		
+		nameC.focusout(() => { if(!nameC.val()){ nameC.addClass("invalid") } else { nameC.removeClass("invalid")}});
+		age.focusout(() => { if(!age.val()){ age.addClass("invalid") } else { age.removeClass("invalid")}});
+		
+		email.focusout(() => {
+			if(!email.val() || !validateEmail(email.val())){
+				email.addClass("invalid");
+			} else {
+				email.removeClass("invalid");
+			}});
+			
+		pass.focusout(() => { if(!pass.val()){ pass.addClass("invalid") } else { pass.removeClass("invalid")}});
+
+				
+    </script>
+    </div>
+</asp:Content>

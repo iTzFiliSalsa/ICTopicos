@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <link rel="stylesheet" href="css/master.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/swiper.min.css">
+
+  <script></script>
+  <title>Insomnio</title>
+</head>
+
+<body>
+  <div class="modal fade" id="incomplete">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Intentalo de nuevo </h5>
+               </div>
+        <div class="modal-body">
+          Los datos estan incompletos
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-modal" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+  <nav class="navbar">
+    <a class="navbar-brand text-white" href="#">
+      <img src="img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      ICTopicos
+    </a>
+  </nav>
+  <div class="container">
+    <div class="welcome mt-5">
+      <form class="needs-validation" id="form" novalidate>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide mb-5">
+              <h5 class="text-center">Empecemos</h5>
+              <p class="text-center">Comienza completando los siguientes datos</p>
+              <div class="line my-3"></div>
+              <div class="form-group">
+                <label for="nombreCompleto">Nombre</label>
+                <input type="text" class="form-control" value="Alejandro Filiberto Salazar Sánchez"
+                  name="nombreCompleto" id="nombreCompleto">
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="Sexo">Sexo</label>
+                    <select class="form-control" name="Sexo" id="Sexo">
+                      <option>Masculino</option>
+                      <option>Femenino</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label for="EdoCivil">Estado Civil</label>
+                    <select class="form-control" name="EdoCivil" id="EdoCivil">
+                      <option>Soltero</option>
+                      <option>Casado</option>
+                      <option>Union Libre</option>
+                      <option>Separado</option>
+                      <option>Divorciado</option>
+                      <option>Viudo</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="Escolaridad">Escolaridad</label>
+                <input type="text" class="form-control" placeholder="Ejemplo: Preparatoria, Universidad, secundaria."
+                  name="Escolaridad" id="Escolaridad" required>
+                <div class="invalid-feedback">
+                  Llena el cuadro de texto
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="Ocupacion">Ocupación</label>
+                <input type="text" class="form-control" placeholder="Ejemplo: Dueño de negocio" name="Ocupacion"
+                  id="Ocupacion" required>
+                <div class="invalid-feedback">
+                  Llena el cuadro de texto
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide mb-5">
+              <h5 class="text-center">¡Sigue asi!</h5>
+              <p class="text-center">Continua completando los datos</p>
+              <div class="line my-3"></div>
+              <div class="form-group">
+                <label for="Enfermedades">Enfermedades que padece</label>
+                <input type="text" class="form-control" placeholder="Ej: Hipertiroidismo" id="Enfermedades"
+                  name="Enfermedades" required>
+                <div class="invalid-feedback">
+                  Llena el cuadro de texto
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="Tratamiento">Tratamiento</label>
+                <input type="text" class="form-control " placeholder="Medicamientos o terapias que usa"
+                  name="Tratamiento" id="Tratamiento" required>
+                <div class="invalid-feedback">
+                  Llena el cuadro de texto
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="DesdeInsomnio">¿Desde hace cuanto padece insomnio?</label>
+                    <input type="text" class="form-control" placeholder="Ejemplo: Hace 3 meses." name="DesdeInsomnio"
+                      id="DesdeInsomnio" required>
+                    <div class="invalid-feedback">
+                      Llena el cuadro de texto
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label for="CausaInsomnio">¿A que causa atribuye su insomnio?</label>
+                    <input type="text" class="form-control" placeholder="Ejemplo: Preocupaciones" name="CausaInsomnio"
+                      id="CausaInsomnio" required>
+                    <div class="invalid-feedback">
+                      Llena el cuadro de texto
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="SatisfechoSueno">¿Esta satisfecho con su sueño?</label>
+                    <select class="form-control" name="SatisfechoSueno" id="SatisfechoSueno">
+                      <option>Si</option>
+                      <option>No</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label for="DuermeBien">¿Duerme usted bien?</label>
+                    <select class="form-control" name="DuermeBien" id="DuermeBien">
+                      <option>Si</option>
+                      <option>No</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide mb-5">
+              <h5 class="text-center">¡Muy bien!</h5>
+              <p class="text-center">Continua completando los datos</p>
+              <div class="line my-3"></div>
+              <div class="table-responsive">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th scope="col">Pregunta</th>
+                      <th scope="col">Si</th>
+                      <th scope="col">No</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>¿Tiene dificultades para empezar a dormir?</td>
+                      <td><input type="radio" name="dificultadesDormir" value="Si" required></td>
+                      <td><input type="radio" name="dificultadesDormir" value="No"></td>
+                    </tr>
+                    <tr>
+                      <td>¿Tiene dificultades para mantenerse dormido?</td>
+                      <td><input type="radio" name="dificultadesDormido" value="Si" required></td>
+                      <td><input type="radio" name="dificultadesDormido" value="No"></td>
+                    </tr>
+                    <tr>
+                      <td>¿Despierta antes de lo deseado?</td>
+                      <td><input type="radio" name="despertarAntes" value="Si" required></td>
+                      <td><input type="radio" name="despertarAntes" value="No"></td>
+                    </tr>
+                    <tr>
+                      <td>¿Su sueño no es reparador o es de mala calidad?</td>
+                      <td><input type="radio" name="reparador" value="Si" required></td>
+                      <td><input type="radio" name="reparador" value="No"></td>
+                    </tr>
+                    <tr>
+                      <td>¿Estas dificultades ocurren a pesar de tener oportunidad y circunstancias satisfactorias?</td>
+                      <td><input type="radio" name="circunstancias" value="Si" required></td>
+                      <td><input type="radio" name="circunstancias" value="No"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="swiper-slide mb-5">
+              <h5 class="text-center">¡Ya casi acabamos!</h5>
+              <p class="text-center">Continúa completando los siguientes datos</p>
+              <div class="line my-3"></div>
+              <h5 class="text-center mb-4">¿Experimenta alguna de las siguientes molestias debido a la dificultad para
+                dormir en la noche?</h5>
+              <div class="table-responsive">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th scope="col">Pregunta</th>
+                      <th scope="col">Si</th>
+                      <th scope="col">No</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Fatiga</td>
+                      <td><input type="radio" name="fatiga" value="Si" required></td>
+                      <td><input type="radio" name="fatiga" value="No"></td>
+                    </tr>
+                    <tr>
+                      <td>Alteración en atención, concentración o memoria</td>
+                      <td><input type="radio" name="alteracion" value="Si" required></td>
+                      <td><input type="radio" name="alteracion" value="No"></td>
+                    </tr>
+                    <tr>
+                      <td>Disfunción social o vocacional o pobre desempeño escolar</td>
+                      <td><input type="radio" name="disfuncion" value="No" required></td>
+                      <td><input type="radio" name="disfuncion" value="Si"></td>
+                    </tr>
+                    <tr>
+                      <td>Alteración del estado de animo o irritabilidad</td>
+                      <td><input type="radio" name="irritabilidad" value="Si" required></td>
+                      <td><input type="radio" name="irritabilidad" value="No"></td>
+                    </tr>
+                    <tr>
+                      <td>Somnolencia diurna</td>
+                      <td><input type="radio" name="somnolencia" value="Si" required></td>
+                      <td><input type="radio" name="somnolencia" value="No"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="swiper-slide mb-5">
+              <h5 class="text-center">¡Terminamos!</h5>
+              <p class="text-center">Termina de completar los siguientes datos</p>
+              <div class="line my-3"></div>
+              <h5 class="text-center mb-4">¿Experimenta alguna de las siguientes molestias debido a la dificultad para
+                dormir en la noche?</h5>
+              <div class="table-responsive">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th scope="col">Pregunta</th>
+                      <th scope="col">Si</th>
+                      <th scope="col">No</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Reducción en la motivación, energia o iniciativa</td>
+                      <td><input type="radio" name="reduccion" value="Si" required></td>
+                      <td><input type="radio" name="reduccion" value="No"></td>
+                    </tr>
+                    <tr>
+                      <td>Tendencia a los errores o accidentes en el trabajo o al conducir</td>
+                      <td><input type="radio" name="tendencia" value="Si" required></td>
+                      <td><input type="radio" name="tendencia" value="No"></td>
+                    </tr>
+                    <tr>
+                      <td>Tensión, cefalea, o sintomas gastrointestinales en respuesta a la perdida de sueño</td>
+                      <td><input type="radio" name="tension" value="Si" required></td>
+                      <td><input type="radio" name="tension" value="No"></td>
+                    </tr>
+                    <tr>
+                      <td>Preocupaciones por el sueño</td>
+                      <td><input type="radio" name="preocupaciones" value="Si" required></td>
+                      <td><input type="radio" name="preocupaciones" value="Si"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="center">
+                <input type="submit" class="custom-btn" value="Continuar">
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <script src="js/jquery-3.5.0.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script src="js/swiper.js"></script>
+  <script>
+
+    var forms = $('.needs-validation');
+
+    $('input:radio').click(function () {
+      var name = $(this).attr("name");
+      $("input:radio[name=" + name + "]").each(function () {
+        $(this).css({
+          'border-color': 'gray'
+        });
+      });
+    });
+
+    const radios = () => {
+      $("input:radio").each(function () {
+        const name = $(this).attr('name');
+        if ($("input:radio[name=" + name + "]:checked").length == 0) {
+          $(this).css({
+            'border-color': 'red'
+          });
+        }
+      });
+    }
+
+    const funValidation = (form) => {
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        radios();
+
+        imForm = $("#form").serializeArray();
+        console.log(imForm);
+        if (form.checkValidity()) {
+          imForm = $("#form").serializeArray();
+          $(imForm).each(function (index, item) {
+            console.log(item.name, item.value);
+          });
+        }else{
+          $("#incomplete").modal('show');
+        }
+
+        form.classList.add('was-validated');
+      }, false);
+    };
+
+    var validation = Array.prototype.filter.call(forms, funValidation);
+
+    var swiper = new Swiper('.swiper-container', {
+      allowTouchMove: false,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + '</span>';
+        },
+      },
+    });
+  </script>
+</body>
+
+</html>
