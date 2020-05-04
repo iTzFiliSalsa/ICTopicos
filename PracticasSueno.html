@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/master.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+    <script></script>
+    <title>Insomnio</title>
+</head>
+
+<body>
+    <div class="modal fade" id="incomplete">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Intentalo de nuevo </h5>
+                </div>
+                <div class="modal-body">
+                    Los datos estan incompletos
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="custom-btn" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar ">
+        <a class="navbar-brand text-white" href="#">
+            <img src="img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            ICTopicos
+        </a>
+        <button class="btn-secondary">Cerrar sesión</button>
+    </nav>
+    <div class="container-fluid">
+        <div class="title my-3">
+            <h5 class="text-center py-2 text-white bg-principal">Escala de prácticas de higiene del sueño</h5>
+        </div>
+        <div class="welcome">
+
+            <form class="needs-validation" id="form" novalidate>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide mb-5">
+                            <h5 class="text-center">Llego la hora de comenzar</h5>
+                            <p class="text-center">Empieza completando los datos</p>
+                            <div class="line my-3"></div>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center" scope="col">Pregunta</th>
+                                            <th class="text-center" scope="col">Nunca</th>
+                                            <th class="text-center" scope="col">Raramente</th>
+                                            <th class="text-center" scope="col">Ocasionalmente</th>
+                                            <th class="text-center" scope="col">Aveces</th>
+                                            <th class="text-center" scope="col">Frecuentemente</th>
+                                            <th class="text-center" scope="col">Siempre</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>La hora de ir a la cama no es constante todos los dias</td>
+                                            <td class="text-center"><input type="radio" name="HoraCamaNoConstante" value="Nunca" required></td>
+                                            <td class="text-center"><input type="radio" name="HoraCamaNoConstante" value="Raramente" required></td>
+                                            <td class="text-center"><input type="radio" name="HoraCamaNoConstante" value="Ocasionalmente" required></td>
+                                            <td class="text-center"><input type="radio" name="HoraCamaNoConstante" value="Aveces" required></td>
+                                            <td class="text-center"><input type="radio" name="HoraCamaNoConstante" value="Frecuentemente" required></td>
+                                            <td class="text-center"><input type="radio" name="HoraCamaNoConstante" value="Siempre" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>La hora de levantarse no es constante todos los días</td>
+                                            <td class="text-center"><input type="radio" name="HoraLevantarseNoConstante" value="Nunca" required></td>
+                                            <td class="text-center"><input type="radio" name="HoraLevantarseNoConstante" value="Raramente" required></td>
+                                            <td class="text-center"><input type="radio" name="HoraLevantarseNoConstante" value="Ocasionalmente" required></td>
+                                            <td class="text-center"><input type="radio" name="HoraLevantarseNoConstante" value="Aveces" required></td>
+                                            <td class="text-center"><input type="radio" name="HoraLevantarseNoConstante" value="Frecuentemente" required></td>
+                                            <td class="text-center"><input type="radio" name="HoraLevantarseNoConstante" value="Siempre" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Permanecer en cama después de despertar por la mañana</td>
+                                            <td class="text-center"><input type="radio" name="PermanecerCama" value="Nunca" required></td>
+                                            <td class="text-center"><input type="radio" name="PermanecerCama" value="Raramente" required></td>
+                                            <td class="text-center"><input type="radio" name="PermanecerCama" value="Ocasionalmente" required></td>
+                                            <td class="text-center"><input type="radio" name="PermanecerCama" value="Aveces" required></td>
+                                            <td class="text-center"><input type="radio" name="PermanecerCama" value="Frecuentemente" required></td>
+                                            <td class="text-center"><input type="radio" name="PermanecerCama" value="Siempre" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dormir hasta tarde todos los fines de semana.</td>
+                                            <td class="text-center"><input type="radio" name="DormiTarde" value="Nunca" required></td>
+                                            <td class="text-center"><input type="radio" name="DormiTarde" value="Raramente" required></td>
+                                            <td class="text-center"><input type="radio" name="DormiTarde" value="Ocasionalmente" required></td>
+                                            <td class="text-center"><input type="radio" name="DormiTarde" value="Aveces" required></td>
+                                            <td class="text-center"><input type="radio" name="DormiTarde" value="Frecuentemente" required></td>
+                                            <td class="text-center"><input type="radio" name="DormiTarde" value="Siempre" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Realizar en la cama actividades no relacionadas con el dormir (Ver TV o leer)</td>
+                                            <td class="text-center"><input type="radio" name="ActividadesNoRelacionadas" value="Nunca" required></td>
+                                            <td class="text-center"><input type="radio" name="ActividadesNoRelacionadas" value="Raramente" required></td>
+                                            <td class="text-center"><input type="radio" name="ActividadesNoRelacionadas" value="Ocasionalmente" required></td>
+                                            <td class="text-center"><input type="radio" name="ActividadesNoRelacionadas" value="Aveces" required></td>
+                                            <td class="text-center"><input type="radio" name="ActividadesNoRelacionadas" value="Frecuentemente" required></td>
+                                            <td class="text-center"><input type="radio" name="ActividadesNoRelacionadas" value="Siempre" required></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="swiper-slide mb-5">
+                            <h5 class="text-center">Llego la hora de comenzar</h5>
+                            <p class="text-center">Empieza completando los datos</p>
+                            <div class="line my-3"></div>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center" scope="col">Pregunta</th>
+                                            <th class="text-center" scope="col">Nunca</th>
+                                            <th class="text-center" scope="col">Raramente</th>
+                                            <th class="text-center" scope="col">Ocasionalmente</th>
+                                            <th class="text-center" scope="col">Aveces</th>
+                                            <th class="text-center" scope="col">Frecuentemente</th>
+                                            <th class="text-center" scope="col">Siempre</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Irse a dormir con hambre</td>
+                                            <td class="text-center"><input type="radio" name="DormirConHambre" value="Nunca" required></td>
+                                            <td class="text-center"><input type="radio" name="DormirConHambre" value="Raramente" required></td>
+                                            <td class="text-center"><input type="radio" name="DormirConHambre" value="Ocasionalmente" required></td>
+                                            <td class="text-center"><input type="radio" name="DormirConHambre" value="Aveces" required></td>
+                                            <td class="text-center"><input type="radio" name="DormirConHambre" value="Frecuentemente" required></td>
+                                            <td class="text-center"><input type="radio" name="DormirConHambre" value="Siempre" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Preocuparse por no dormirse en la cama</td>
+                                            <td class="text-center"><input type="radio" name="PreocuparseCama" value="Nunca" required></td>
+                                            <td class="text-center"><input type="radio" name="PreocuparseCama" value="Raramente" required></td>
+                                            <td class="text-center"><input type="radio" name="PreocuparseCama" value="Ocasionalmente" required></td>
+                                            <td class="text-center"><input type="radio" name="PreocuparseCama" value="Aveces" required></td>
+                                            <td class="text-center"><input type="radio" name="PreocuparseCama" value="Frecuentemente" required></td>
+                                            <td class="text-center"><input type="radio" name="PreocuparseCama" value="Siempre" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tener una conversación desagradable antes de ir a dormir</td>
+                                            <td class="text-center"><input type="radio" name="ConversacionDesagradable" value="Nunca" required></td>
+                                            <td class="text-center"><input type="radio" name="ConversacionDesagradable" value="Raramente" required></td>
+                                            <td class="text-center"><input type="radio" name="ConversacionDesagradable" value="Ocasionalmente" required></td>
+                                            <td class="text-center"><input type="radio" name="ConversacionDesagradable" value="Aveces" required></td>
+                                            <td class="text-center"><input type="radio" name="ConversacionDesagradable" value="Frecuentemente" required></td>
+                                            <td class="text-center"><input type="radio" name="ConversacionDesagradable" value="Siempre" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tiempo suficiente para relajarse antes de ir a dormir</td>
+                                            <td class="text-center"><input type="radio" name="TiempoSuficiente" value="Nunca" required></td>
+                                            <td class="text-center"><input type="radio" name="TiempoSuficiente" value="Raramente" required></td>
+                                            <td class="text-center"><input type="radio" name="TiempoSuficiente" value="Ocasionalmente" required></td>
+                                            <td class="text-center"><input type="radio" name="TiempoSuficiente" value="Aveces" required></td>
+                                            <td class="text-center"><input type="radio" name="TiempoSuficiente" value="Frecuentemente" required></td>
+                                            <td class="text-center"><input type="radio" name="TiempoSuficiente" value="Siempre" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Quedarse dormido/a con la TV o la música encendida</td>
+                                            <td class="text-center"><input type="radio" name="QuedarseDormido" value="Nunca" required></td>
+                                            <td class="text-center"><input type="radio" name="QuedarseDormido" value="Raramente" required></td>
+                                            <td class="text-center"><input type="radio" name="QuedarseDormido" value="Ocasionalmente" required></td>
+                                            <td class="text-center"><input type="radio" name="QuedarseDormido" value="Aveces" required></td>
+                                            <td class="text-center"><input type="radio" name="QuedarseDormido" value="Frecuentemente" required></td>
+                                            <td class="text-center"><input type="radio" name="QuedarseDormido" value="Siempre" required></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="swiper-slide mb-5">
+                            <h5 class="text-center">Llego la hora de comenzar</h5>
+                            <p class="text-center">Empieza completando los datos</p>
+                            <div class="line my-3"></div>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center" scope="col">Pregunta</th>
+                                            <th class="text-center" scope="col">Nunca</th>
+                                            <th class="text-center" scope="col">Raramente</th>
+                                            <th class="text-center" scope="col">Ocasionalmente</th>
+                                            <th class="text-center" scope="col">Aveces</th>
+                                            <th class="text-center" scope="col">Frecuentemente</th>
+                                            <th class="text-center" scope="col">Siempre</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Pensar en asuntos no resueltos mientras está acostado/a en la cama</td>
+                                            <td class="text-center"><input type="radio" name="PensarAsuntos" value="Nunca" required></td>
+                                            <td class="text-center"><input type="radio" name="PensarAsuntos" value="Raramente" required></td>
+                                            <td class="text-center"><input type="radio" name="PensarAsuntos" value="Ocasionalmente" required></td>
+                                            <td class="text-center"><input type="radio" name="PensarAsuntos" value="Aveces" required></td>
+                                            <td class="text-center"><input type="radio" name="PensarAsuntos" value="Frecuentemente" required></td>
+                                            <td class="text-center"><input type="radio" name="PensarAsuntos" value="Siempre" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ver la hora a la mitad de la noche</td>
+                                            <td class="text-center"><input type="radio" name="VerHora" value="Nunca" required></td>
+                                            <td class="text-center"><input type="radio" name="VerHora" value="Raramente" required></td>
+                                            <td class="text-center"><input type="radio" name="VerHora" value="Ocasionalmente" required></td>
+                                            <td class="text-center"><input type="radio" name="VerHora" value="Aveces" required></td>
+                                            <td class="text-center"><input type="radio" name="VerHora" value="Frecuentemente" required></td>
+                                            <td class="text-center"><input type="radio" name="VerHora" value="Siempre" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tomar siesta o descansar en la cama por mas de 1 hora durante el día</td>
+                                            <td class="text-center"><input type="radio" name="TomarSiesta" value="Nunca" required></td>
+                                            <td class="text-center"><input type="radio" name="TomarSiesta" value="Raramente" required></td>
+                                            <td class="text-center"><input type="radio" name="TomarSiesta" value="Ocasionalmente" required></td>
+                                            <td class="text-center"><input type="radio" name="TomarSiesta" value="Aveces" required></td>
+                                            <td class="text-center"><input type="radio" name="TomarSiesta" value="Frecuentemente" required></td>
+                                            <td class="text-center"><input type="radio" name="TomarSiesta" value="Siempre" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Falta de exposición a la luz natural durante el dia</td>
+                                            <td class="text-center"><input type="radio" name="FaltaExposicion" value="Nunca" required></td>
+                                            <td class="text-center"><input type="radio" name="FaltaExposicion" value="Raramente" required></td>
+                                            <td class="text-center"><input type="radio" name="FaltaExposicion" value="Ocasionalmente" required></td>
+                                            <td class="text-center"><input type="radio" name="FaltaExposicion" value="Aveces" required></td>
+                                            <td class="text-center"><input type="radio" name="FaltaExposicion" value="Frecuentemente" required></td>
+                                            <td class="text-center"><input type="radio" name="FaltaExposicion" value="Siempre" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Falta de ejercicio físico regular</td>
+                                            <td class="text-center"><input type="radio" name="FaltaEjercicio" value="Nunca" required></td>
+                                            <td class="text-center"><input type="radio" name="FaltaEjercicio" value="Raramente" required></td>
+                                            <td class="text-center"><input type="radio" name="FaltaEjercicio" value="Ocasionalmente" required></td>
+                                            <td class="text-center"><input type="radio" name="FaltaEjercicio" value="Aveces" required></td>
+                                            <td class="text-center"><input type="radio" name="FaltaEjercicio" value="Frecuentemente" required></td>
+                                            <td class="text-center"><input type="radio" name="FaltaEjercicio" value="Siempre" required></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="swiper-slide mb-5">
+                            <h5 class="text-center">Llego la hora de comenzar</h5>
+                            <p class="text-center">Empieza completando los datos</p>
+                            <div class="line my-3"></div>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center" scope="col">Pregunta</th>
+                                            <th class="text-center" scope="col">Nunca</th>
+                                            <th class="text-center" scope="col">Raramente</th>
+                                            <th class="text-center" scope="col">Ocasionalmente</th>
+                                            <th class="text-center" scope="col">Aveces</th>
+                                            <th class="text-center" scope="col">Frecuentemente</th>
+                                            <th class="text-center" scope="col">Siempre</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Preocuparse durante el día acerca del dormir nocturno</td>
+                                            <td class="text-center"><input type="radio" name="PreocuparseDormir" value="Nunca" required></td>
+                                            <td class="text-center"><input type="radio" name="PreocuparseDormir" value="Raramente" required></td>
+                                            <td class="text-center"><input type="radio" name="PreocuparseDormir" value="Ocasionalmente" required></td>
+                                            <td class="text-center"><input type="radio" name="PreocuparseDormir" value="Aveces" required></td>
+                                            <td class="text-center"><input type="radio" name="PreocuparseDormir" value="Frecuentemente" required></td>
+                                            <td class="text-center"><input type="radio" name="PreocuparseDormir" value="Siempre" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Consumir bebidas cafeinadas en las 4 horas previas a irse a la cama</td>
+                                            <td class="text-center"><input type="radio" name="ConsumirBebidas" value="Nunca" required></td>
+                                            <td class="text-center"><input type="radio" name="ConsumirBebidas" value="Raramente" required></td>
+                                            <td class="text-center"><input type="radio" name="ConsumirBebidas" value="Ocasionalmente" required></td>
+                                            <td class="text-center"><input type="radio" name="ConsumirBebidas" value="Aveces" required></td>
+                                            <td class="text-center"><input type="radio" name="ConsumirBebidas" value="Frecuentemente" required></td>
+                                            <td class="text-center"><input type="radio" name="ConsumirBebidas" value="Siempre" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Consumir alcohol en las 2 horas previas a irse a la cama</td>
+                                            <td class="text-center"><input type="radio" name="ConsumirAlcohol" value="Nunca" required></td>
+                                            <td class="text-center"><input type="radio" name="ConsumirAlcohol" value="Raramente" required></td>
+                                            <td class="text-center"><input type="radio" name="ConsumirAlcohol" value="Ocasionalmente" required></td>
+                                            <td class="text-center"><input type="radio" name="ConsumirAlcohol" value="Aveces" required></td>
+                                            <td class="text-center"><input type="radio" name="ConsumirAlcohol" value="Frecuentemente" required></td>
+                                            <td class="text-center"><input type="radio" name="ConsumirAlcohol" value="Siempre" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Consumir sustancias estimulates (por ejemplo nicotina) en las 2 horas previas a irse a la cama</td>
+                                            <td class="text-center"><input type="radio" name="ConsumirSustancias" value="Nunca" required></td>
+                                            <td class="text-center"><input type="radio" name="ConsumirSustancias" value="Raramente" required></td>
+                                            <td class="text-center"><input type="radio" name="ConsumirSustancias" value="Ocasionalmente" required></td>
+                                            <td class="text-center"><input type="radio" name="ConsumirSustancias" value="Aveces" required></td>
+                                            <td class="text-center"><input type="radio" name="ConsumirSustancias" value="Frecuentemente" required></td>
+                                            <td class="text-center"><input type="radio" name="ConsumirSustancias" value="Siempre" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Realizar ejercicio vigoroso en las 2 horas previas a acostarse</td>
+                                            <td class="text-center"><input type="radio" name="RealizarEjercicio" value="Nunca" required></td>
+                                            <td class="text-center"><input type="radio" name="RealizarEjercicio" value="Raramente" required></td>
+                                            <td class="text-center"><input type="radio" name="RealizarEjercicio" value="Ocasionalmente" required></td>
+                                            <td class="text-center"><input type="radio" name="RealizarEjercicio" value="Aveces" required></td>
+                                            <td class="text-center"><input type="radio" name="RealizarEjercicio" value="Frecuentemente" required></td>
+                                            <td class="text-center"><input type="radio" name="RealizarEjercicio" value="Siempre" required></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="swiper-slide mb-5">
+                            <h5 class="text-center">Llego la hora de comenzar</h5>
+                            <p class="text-center">Empieza completando los datos</p>
+                            <div class="line my-3"></div>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center" scope="col">Pregunta</th>
+                                            <th class="text-center" scope="col">Nunca</th>
+                                            <th class="text-center" scope="col">Raramente</th>
+                                            <th class="text-center" scope="col">Ocasionalmente</th>
+                                            <th class="text-center" scope="col">Aveces</th>
+                                            <th class="text-center" scope="col">Frecuentemente</th>
+                                            <th class="text-center" scope="col">Siempre</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Beber muchos líquidos durante la hora previa a acostarse</td>
+                                            <td class="text-center"><input type="radio" name="BeberMucho" value="Nunca" required></td>
+                                            <td class="text-center"><input type="radio" name="BeberMucho" value="Raramente" required></td>
+                                            <td class="text-center"><input type="radio" name="BeberMucho" value="Ocasionalmente" required></td>
+                                            <td class="text-center"><input type="radio" name="BeberMucho" value="Aveces" required></td>
+                                            <td class="text-center"><input type="radio" name="BeberMucho" value="Frecuentemente" required></td>
+                                            <td class="text-center"><input type="radio" name="BeberMucho" value="Siempre" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Comer demasiado durante la hora previa a acostarse</td>
+                                            <td class="text-center"><input type="radio" name="ComerDemasiado" value="Nunca" required></td>
+                                            <td class="text-center"><input type="radio" name="ComerDemasiado" value="Raramente" required></td>
+                                            <td class="text-center"><input type="radio" name="ComerDemasiado" value="Ocasionalmente" required></td>
+                                            <td class="text-center"><input type="radio" name="ComerDemasiado" value="Aveces" required></td>
+                                            <td class="text-center"><input type="radio" name="ComerDemasiado" value="Frecuentemente" required></td>
+                                            <td class="text-center"><input type="radio" name="ComerDemasiado" value="Siempre" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>El ambiente donde duerme es demasiado ruidoso o demasiado silencioso</td>
+                                            <td class="text-center"><input type="radio" name="AmbienteRuidoso" value="Nunca" required></td>
+                                            <td class="text-center"><input type="radio" name="AmbienteRuidoso" value="Raramente" required></td>
+                                            <td class="text-center"><input type="radio" name="AmbienteRuidoso" value="Ocasionalmente" required></td>
+                                            <td class="text-center"><input type="radio" name="AmbienteRuidoso" value="Aveces" required></td>
+                                            <td class="text-center"><input type="radio" name="AmbienteRuidoso" value="Frecuentemente" required></td>
+                                            <td class="text-center"><input type="radio" name="AmbienteRuidoso" value="Siempre" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>El ambiente donde duerme es damsiado luminoso o demasiado oscuro</td>
+                                            <td class="text-center"><input type="radio" name="AmbienteLuminoso" value="Nunca" required></td>
+                                            <td class="text-center"><input type="radio" name="AmbienteLuminoso" value="Raramente" required></td>
+                                            <td class="text-center"><input type="radio" name="AmbienteLuminoso" value="Ocasionalmente" required></td>
+                                            <td class="text-center"><input type="radio" name="AmbienteLuminoso" value="Aveces" required></td>
+                                            <td class="text-center"><input type="radio" name="AmbienteLuminoso" value="Frecuentemente" required></td>
+                                            <td class="text-center"><input type="radio" name="AmbienteLuminoso" value="Siempre" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>El ambiente donde duerme es demasiado húmedo o demasiado seco</td>
+                                            <td class="text-center"><input type="radio" name="AmbienteHumedo" value="Nunca" required></td>
+                                            <td class="text-center"><input type="radio" name="AmbienteHumedo" value="Raramente" required></td>
+                                            <td class="text-center"><input type="radio" name="AmbienteHumedo" value="Ocasionalmente" required></td>
+                                            <td class="text-center"><input type="radio" name="AmbienteHumedo" value="Aveces" required></td>
+                                            <td class="text-center"><input type="radio" name="AmbienteHumedo" value="Frecuentemente" required></td>
+                                            <td class="text-center"><input type="radio" name="AmbienteHumedo" value="Siempre" required></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="swiper-slide mb-5">
+                            <h5 class="text-center">Llego la hora de comenzar</h5>
+                            <p class="text-center">Empieza completando los datos</p>
+                            <div class="line my-3"></div>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center" scope="col">Pregunta</th>
+                                            <th class="text-center" scope="col">Nunca</th>
+                                            <th class="text-center" scope="col">Raramente</th>
+                                            <th class="text-center" scope="col">Ocasionalmente</th>
+                                            <th class="text-center" scope="col">Aveces</th>
+                                            <th class="text-center" scope="col">Frecuentemente</th>
+                                            <th class="text-center" scope="col">Siempre</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Sentir demasiado calor o demasiado frío durante el sueño</td>
+                                            <td class="text-center"><input type="radio" name="SentirCalor" value="Nunca" required></td>
+                                            <td class="text-center"><input type="radio" name="SentirCalor" value="Raramente" required></td>
+                                            <td class="text-center"><input type="radio" name="SentirCalor" value="Ocasionalmente" required></td>
+                                            <td class="text-center"><input type="radio" name="SentirCalor" value="Aveces" required></td>
+                                            <td class="text-center"><input type="radio" name="SentirCalor" value="Frecuentemente" required></td>
+                                            <td class="text-center"><input type="radio" name="SentirCalor" value="Siempre" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Poca ventilación en la habitación</td>
+                                            <td class="text-center"><input type="radio" name="PocaVentilacion" value="Nunca" required></td>
+                                            <td class="text-center"><input type="radio" name="PocaVentilacion" value="Raramente" required></td>
+                                            <td class="text-center"><input type="radio" name="PocaVentilacion" value="Ocasionalmente" required></td>
+                                            <td class="text-center"><input type="radio" name="PocaVentilacion" value="Aveces" required></td>
+                                            <td class="text-center"><input type="radio" name="PocaVentilacion" value="Frecuentemente" required></td>
+                                            <td class="text-center"><input type="radio" name="PocaVentilacion" value="Siempre" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cama y/o almohada incómodas</td>
+                                            <td class="text-center"><input type="radio" name="CamaIncomoda" value="Nunca" required></td>
+                                            <td class="text-center"><input type="radio" name="CamaIncomoda" value="Raramente" required></td>
+                                            <td class="text-center"><input type="radio" name="CamaIncomoda" value="Ocasionalmente" required></td>
+                                            <td class="text-center"><input type="radio" name="CamaIncomoda" value="Aveces" required></td>
+                                            <td class="text-center"><input type="radio" name="CamaIncomoda" value="Frecuentemente" required></td>
+                                            <td class="text-center"><input type="radio" name="CamaIncomoda" value="Siempre" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Presencia de muchos objetos no relacionador con el dormir dentro de la habitación</td>
+                                            <td class="text-center"><input type="radio" name="PresenciaObjetos" value="Nunca" required></td>
+                                            <td class="text-center"><input type="radio" name="PresenciaObjetos" value="Raramente" required></td>
+                                            <td class="text-center"><input type="radio" name="PresenciaObjetos" value="Ocasionalmente" required></td>
+                                            <td class="text-center"><input type="radio" name="PresenciaObjetos" value="Aveces" required></td>
+                                            <td class="text-center"><input type="radio" name="PresenciaObjetos" value="Frecuentemente" required></td>
+                                            <td class="text-center"><input type="radio" name="PresenciaObjetos" value="Siempre" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>El dormir es afectado por el/la compañero/a de cama</td>
+                                            <td class="text-center"><input type="radio" name="DormirCompanero" value="Nunca" required></td>
+                                            <td class="text-center"><input type="radio" name="DormirCompanero" value="Raramente" required></td>
+                                            <td class="text-center"><input type="radio" name="DormirCompanero" value="Ocasionalmente" required></td>
+                                            <td class="text-center"><input type="radio" name="DormirCompanero" value="Aveces" required></td>
+                                            <td class="text-center"><input type="radio" name="DormirCompanero" value="Frecuentemente" required></td>
+                                            <td class="text-center"><input type="radio" name="DormirCompanero" value="Siempre" required></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="center">
+                                <input type="submit" class="custom-btn" value="Completar">
+                              </div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="js/jquery-3.5.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="js/swiper.js"></script>
+    <script>
+
+        var forms = $('.needs-validation');
+
+        $('input:radio').click(function () {
+            var name = $(this).attr("name");
+            $("input:radio[name=" + name + "]").each(function () {
+                $(this).css({
+                    'border-color': 'gray'
+                });
+            });
+        });
+
+        const radios = () => {
+            $("input:radio").each(function () {
+                const name = $(this).attr('name');
+                if ($("input:radio[name=" + name + "]:checked").length == 0) {
+                    $(this).css({
+                        'border-color': 'red'
+                    });
+                }
+            });
+        }
+
+        const funValidation = (form) => {
+            form.addEventListener('submit', (event) => {
+                event.preventDefault();
+                event.stopPropagation();
+                radios();
+
+                imForm = $("#form").serializeArray();
+                console.log(imForm);
+                if (form.checkValidity()) {
+                    imForm = $("#form").serializeArray();
+                    $(imForm).each(function (index, item) {
+                        console.log(item.name, item.value);
+                    });
+                } else {
+                    $("#incomplete").modal('show');
+                }
+
+                form.classList.add('was-validated');
+            }, false);
+        };
+
+        var validation = Array.prototype.filter.call(forms, funValidation);
+
+        var swiper = new Swiper('.swiper-container', {
+            allowTouchMove: false,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '">' + (index + 1) + '</span>';
+                },
+            },
+        });
+    </script>
+</body>
+
+</html>
