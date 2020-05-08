@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/master.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+    <script></script>
+    <title>ICTopicos</title>
+</head>
+
+<body>
+    <div class="modal fade" id="incomplete">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Intentalo de nuevo </h5>
+                </div>
+                <div class="modal-body">
+                    Los datos estan incompletos
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="custom-btn" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar ">
+        <a class="navbar-brand text-white" href="#">
+            <img src="img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            ICTopicos
+        </a>
+        <button class="btn-secondary">Cerrar sesión</button>
+    </nav>
+    <div class="container-fluid">
+        <div class="title my-3">
+            <h5 class="text-center py-2 text-white bg-principal">Indice de severidad del insomnio</h5>
+        </div>
+
+        <div class="welcome pt-3">
+            <h5 class="text-center">Leer las preguntas con atención</h5>
+            
+            <form class="needs-validation" id="form" novalidate>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide mb-5">
+                            <p class="text-center">Por favor califique la severidad actual de su problema de insomnio</p>
+                            <div class="line my-3"></div>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center" scope="col">Actividad</th>
+                                            <th class="text-center" scope="col">Ninguna</th>
+                                            <th class="text-center" scope="col">Leve</th>
+                                            <th class="text-center" scope="col">Moderada</th>
+                                            <th class="text-center" scope="col">Severa</th>
+                                            <th class="text-center" scope="col">Muy Severa</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Dificultad para dormirse</td>
+                                            <td class="text-center"><input type="radio" name="DificultadDormirse" value="Ninguna" required></td>
+                                            <td class="text-center"><input type="radio" name="DificultadDormirse" value="Leve" required></td>
+                                            <td class="text-center"><input type="radio" name="DificultadDormirse" value="Moderada" required></td>
+                                            <td class="text-center"><input type="radio" name="DificultadDormirse" value="Severa" required></td>
+                                            <td class="text-center"><input type="radio" name="DificultadDormirse" value="Muy severa" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dificultad para mantenerse dormido</td>
+                                            <td class="text-center"><input type="radio" name="DificultadDormido" value="Ninguna" required></td>
+                                            <td class="text-center"><input type="radio" name="DificultadDormido" value="Leve" required></td>
+                                            <td class="text-center"><input type="radio" name="DificultadDormido" value="Moderada" required></td>
+                                            <td class="text-center"><input type="radio" name="DificultadDormido" value="Severa" required></td>
+                                            <td class="text-center"><input type="radio" name="DificultadDormido" value="Muy severa" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Problema por despertar muy temprano</td>
+                                            <td class="text-center"><input type="radio" name="ProblemaDespertar" value="Ninguna" required></td>
+                                            <td class="text-center"><input type="radio" name="ProblemaDespertar" value="Leve" required></td>
+                                            <td class="text-center"><input type="radio" name="ProblemaDespertar" value="Moderada" required></td>
+                                            <td class="text-center"><input type="radio" name="ProblemaDespertar" value="Severa" required></td>
+                                            <td class="text-center"><input type="radio" name="ProblemaDespertar" value="Muy severa" required></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="swiper-slide mb-5">
+                            <p class="text-center">¿Qué tan satisfecho/insatisfecho esté usted con su patrón de sueño actual?</p>
+                            <div class="line my-3"></div>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center" scope="col">Pregunta</th>
+                                            <th class="text-center" scope="col">Muy satisfecho</th>
+                                            <th class="text-center" scope="col">Satisfecho</th>
+                                            <th class="text-center" scope="col">Neutral</th>
+                                            <th class="text-center" scope="col">Insatisfecho</th>
+                                            <th class="text-center" scope="col">Muy insatisfecho</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>¿Qué tan satisfecho/insatisfecho esté usted con su patrón de sueño actual?</td>
+                                            <td class="text-center"><input type="radio" name="SuenoActual" value="Muy satisfecho" required></td>
+                                            <td class="text-center"><input type="radio" name="SuenoActual" value="Satisfecho" required></td>
+                                            <td class="text-center"><input type="radio" name="SuenoActual" value="Neutral" required></td>
+                                            <td class="text-center"><input type="radio" name="SuenoActual" value="Insatisfecho" required></td>
+                                            <td class="text-center"><input type="radio" name="SuenoActual" value="Muy Insatisfecho" required></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                        </div>
+                        <div class="swiper-slide mb-5">
+                            <p class="text-center">¿En qué medida considera usted que su problema de sueño interfiere con su funcionamiento diario (por ejemplo, fatiga en el día, capacidad para funcionar en el trabajo/tareas diarias, concentración, memoria, estado de ánimo, etc.)?</p>
+                            <div class="line my-3"></div>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center" scope="col">Pregunta</th>
+                                            <th class="text-center" scope="col">No interfiere en absoluto</th>
+                                            <th class="text-center" scope="col">Un poco</th>
+                                            <th class="text-center" scope="col">Algo</th>
+                                            <th class="text-center" scope="col">Mucho</th>
+                                            <th class="text-center" scope="col">Interfiere demasiado</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Seleccionar una opción</td>
+                                            <td class="text-center"><input type="radio" name="ProblemaSueno" value="No interfiere en absoluto" required></td>
+                                            <td class="text-center"><input type="radio" name="ProblemaSueno" value="Un poco" required></td>
+                                            <td class="text-center"><input type="radio" name="ProblemaSueno" value="Algo" required></td>
+                                            <td class="text-center"><input type="radio" name="ProblemaSueno" value="Mucho" required></td>
+                                            <td class="text-center"><input type="radio" name="ProblemaSueno" value="Interfiere demasiado" required></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                        </div>
+                        <div class="swiper-slide mb-5">
+                            <p class="text-center">¿Qué tan evidente para los demás cree usted que es su problema para dormir, en términos de la afección de su calidad de vida?</p>
+                            <div class="line my-3"></div>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center" scope="col">Pregunta</th>
+                                            <th class="text-center" scope="col">Nada evidente</th>
+                                            <th class="text-center" scope="col">Apenas</th>
+                                            <th class="text-center" scope="col">Algo</th>
+                                            <th class="text-center" scope="col">Mucho</th>
+                                            <th class="text-center" scope="co l">Demasiado Evidente</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Seleccionar una opción</td>
+                                            <td class="text-center"><input type="radio" name="Evidente" value="Nada evidente" required></td>
+                                            <td class="text-center"><input type="radio" name="Evidente" value="Apenas" required></td>
+                                            <td class="text-center"><input type="radio" name="Evidente" value="Algo" required></td>
+                                            <td class="text-center"><input type="radio" name="Evidente" value="Mucho" required></td>
+                                            <td class="text-center"><input type="radio" name="Evidente" value="Demasiado evidente" required></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                        </div>
+                        <div class="swiper-slide mb-5">
+                            <p class="text-center">¿Qué tan preocupado/afligido está usted por su problema de sueño actual?</p>
+                            <div class="line my-3"></div>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center" scope="col">Pregunta</th>
+                                            <th class="text-center" scope="col">Nada</th>
+                                            <th class="text-center" scope="col">Un poco</th>
+                                            <th class="text-center" scope="col">Algo</th>
+                                            <th class="text-center" scope="col">Mucho</th>
+                                            <th class="text-center" scope="co l">Demasiado</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>¿Qué tan preocupado/afligido está usted por su problema de sueño actual?</td>
+                                            <td class="text-center"><input type="radio" name="Preocupado" value="Nada" required></td>
+                                            <td class="text-center"><input type="radio" name="Preocupado" value="Un poco" required></td>
+                                            <td class="text-center"><input type="radio" name="Preocupado" value="Algo" required></td>
+                                            <td class="text-center"><input type="radio" name="Preocupado" value="Mucho" required></td>
+                                            <td class="text-center"><input type="radio" name="Preocupado" value="Demasiado" required></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="center">
+                                <input type="submit" class="custom-btn" value="Completar">
+                              </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+
+
+    <script src="js/jquery-3.5.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="js/swiper.js"></script>
+    <script>
+
+        var forms = $('.needs-validation');
+
+        $('input:radio').click(function () {
+            var name = $(this).attr("name");
+            $("input:radio[name=" + name + "]").each(function () {
+                $(this).css({
+                    'border-color': 'gray'
+                });
+            });
+        });
+
+        const radios = () => {
+            $("input:radio").each(function () {
+                const name = $(this).attr('name');
+                if ($("input:radio[name=" + name + "]:checked").length == 0) {
+                    $(this).css({
+                        'border-color': 'red'
+                    });
+                }
+            });
+        }
+
+        const funValidation = (form) => {
+            form.addEventListener('submit', (event) => {
+                event.preventDefault();
+                event.stopPropagation();
+                radios();
+
+                imForm = $("#form").serializeArray();
+                console.log(imForm);
+                if (form.checkValidity()) {
+                    imForm = $("#form").serializeArray();
+                    $(imForm).each(function (index, item) {
+                        console.log(item.name, item.value);
+                    });
+                } else {
+                    $("#incomplete").modal('show');
+                }
+
+                form.classList.add('was-validated');
+            }, false);
+        };
+
+        var validation = Array.prototype.filter.call(forms, funValidation);
+
+        var swiper = new Swiper('.swiper-container', {
+            allowTouchMove: false,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '">' + (index + 1) + '</span>';
+                },
+            },
+        });
+    </script>
+</body>
+
+</html>
