@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/master.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+    <script></script>
+    <title>ICTopicos</title>
+</head>
+
+<body>
+    <div class="modal fade" id="incomplete">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Intentalo de nuevo </h5>
+                </div>
+                <div class="modal-body">
+                    Los datos estan incompletos
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="custom-btn" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar ">
+        <a class="navbar-brand text-white" href="#">
+            <img src="img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            ICTopicos
+        </a>
+        <button class="btn-secondary">Cerrar sesión</button>
+    </nav>
+    <div class="container-fluid">
+        <div class="title my-3">
+            <h5 class="text-center py-2 text-white bg-principal">Cuestionario Holandes de transtornos del sueño</h5>
+        </div>
+
+        <div class="welcome pt-3">
+            <h5 class="text-center">Indique hasta qué punto, aplican en usted cada uno de los siguientes enunciados</h5>
+            <p class="text-center">Considere los últimos tres meses al contestar estas preguntas. A pesar de que tal vez no conozca la respuesta indique lo que le haya dicho alguna persona o familiar o lo que uested crea que es cierto.</p>
+            
+            <form class="needs-validation" id="form" novalidate>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide mb-5">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center" scope="col">Enunciado</th>
+                                            <th class="text-center" scope="col">No aplicable</th>
+                                            <th class="text-center" scope="col">Generalmente no aplicable</th>
+                                            <th class="text-center" scope="col">Algunas veces aplicable</th>
+                                            <th class="text-center" scope="col">Por lo general aplicable</th>
+                                            <th class="text-center" scope="col">Aplicable</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Durante el día experimento cansancio</td>
+                                            <td class="text-center"><input type="radio" name="ExperimentoCansancio" value="No aplicable en lo absoluto" required></td>
+                                            <td class="text-center"><input type="radio" name="ExperimentoCansancio" value="Generalmente no aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="ExperimentoCansancio" value="Algunas veces aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="ExperimentoCansancio" value="Por lo general aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="ExperimentoCansancio" value="Aplicable" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cuando me acuesto en la cama experimento una sensación desagradble de picazzón o quemazón en mis piernas</td>
+                                            <td class="text-center"><input type="radio" name="AcuestoCama" value="No aplicable en lo absoluto" required></td>
+                                            <td class="text-center"><input type="radio" name="AcuestoCama" value="Generalmente no aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="AcuestoCama" value="Algunas veces aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="AcuestoCama" value="Por lo general aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="AcuestoCama" value="Aplicable" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Despierto con la boca seca en la mañana</td>
+                                            <td class="text-center"><input type="radio" name="BocaSecar" value="No aplicable en lo absoluto" required></td>
+                                            <td class="text-center"><input type="radio" name="BocaSecar" value="Generalmente no aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="BocaSecar" value="Algunas veces aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="BocaSecar" value="Por lo general aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="BocaSecar" value="Aplicable" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Despierto a la mitad de la noche, gritando y/o sudoración intensa y sensación de angustia</td>
+                                            <td class="text-center"><input type="radio" name="MitadNoche" value="No aplicable en lo absoluto" required></td>
+                                            <td class="text-center"><input type="radio" name="MitadNoche" value="Generalmente no aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="MitadNoche" value="Algunas veces aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="MitadNoche" value="Por lo general aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="MitadNoche" value="Aplicable" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>No me puedo quedar dormido hasta en la mañana y tengo mucha dificultad para despertar temprano.</td>
+                                            <td class="text-center"><input type="radio" name="DormidoHasta" value="No aplicable en lo absoluto" required></td>
+                                            <td class="text-center"><input type="radio" name="DormidoHasta" value="Generalmente no aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="DormidoHasta" value="Algunas veces aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="DormidoHasta" value="Por lo general aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="DormidoHasta" value="Aplicable" required></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="swiper-slide mb-5">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center" scope="col">Enunciado</th>
+                                            <th class="text-center" scope="col">No aplicable</th>
+                                            <th class="text-center" scope="col">Generalmente no aplicable</th>
+                                            <th class="text-center" scope="col">Algunas veces aplicable</th>
+                                            <th class="text-center" scope="col">Por lo general aplicable</th>
+                                            <th class="text-center" scope="col">Aplicable</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Cuando experimento piernas inquietas puedo contener o suprimir estas sensaciones caminando o estirando las piernas</td>
+                                            <td class="text-center"><input type="radio" name="PiernasInquietas" value="No aplicable en lo absoluto" required></td>
+                                            <td class="text-center"><input type="radio" name="PiernasInquietas" value="Generalmente no aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="PiernasInquietas" value="Algunas veces aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="PiernasInquietas" value="Por lo general aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="PiernasInquietas" value="Aplicable" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>La calidad de mi sueño es mala y no me siento descansado por las mañanas</td>
+                                            <td class="text-center"><input type="radio" name="CalidadMala" value="No aplicable en lo absoluto" required></td>
+                                            <td class="text-center"><input type="radio" name="CalidadMala" value="Generalmente no aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="CalidadMala" value="Algunas veces aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="CalidadMala" value="Por lo general aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="CalidadMala" value="Aplicable" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cuando permanezco sentado, especialmente por la tardes, siento la necesidad de mover mis piernas</td>
+                                            <td class="text-center"><input type="radio" name="PermanezcoSentado" value="No aplicable en lo absoluto" required></td>
+                                            <td class="text-center"><input type="radio" name="PermanezcoSentado" value="Generalmente no aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="PermanezcoSentado" value="Algunas veces aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="PermanezcoSentado" value="Por lo general aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="PermanezcoSentado" value="Aplicable" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Muevo mis brazos y piernas mientras duermo</td>
+                                            <td class="text-center"><input type="radio" name="MuevoMisBrazos" value="No aplicable en lo absoluto" required></td>
+                                            <td class="text-center"><input type="radio" name="MuevoMisBrazos" value="Generalmente no aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="MuevoMisBrazos" value="Algunas veces aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="MuevoMisBrazos" value="Por lo general aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="MuevoMisBrazos" value="Aplicable" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Por las noches cuando me acuesto, permanezco despierto por mucho tiempo</td>
+                                            <td class="text-center"><input type="radio" name="CuandoMeAcuesto" value="No aplicable en lo absoluto" required></td>
+                                            <td class="text-center"><input type="radio" name="CuandoMeAcuesto" value="Generalmente no aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="CuandoMeAcuesto" value="Algunas veces aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="CuandoMeAcuesto" value="Por lo general aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="CuandoMeAcuesto" value="Aplicable" required></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="swiper-slide mb-5">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center" scope="col">Enunciado</th>
+                                            <th class="text-center" scope="col">No aplicable</th>
+                                            <th class="text-center" scope="col">Generalmente no aplicable</th>
+                                            <th class="text-center" scope="col">Algunas veces aplicable</th>
+                                            <th class="text-center" scope="col">Por lo general aplicable</th>
+                                            <th class="text-center" scope="col">Aplicable</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Mientras duermo sufro de movimientos de pataleo que no puedo contener</td>
+                                            <td class="text-center"><input type="radio" name="MientrasDuermo" value="No aplicable en lo absoluto" required></td>
+                                            <td class="text-center"><input type="radio" name="MientrasDuermo" value="Generalmente no aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="MientrasDuermo" value="Algunas veces aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="MientrasDuermo" value="Por lo general aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="MientrasDuermo" value="Aplicable" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Me preocupan las consecuencias de la pobre calidad de mi sueño</td>
+                                            <td class="text-center"><input type="radio" name="PreocupanConsecuencias" value="No aplicable en lo absoluto" required></td>
+                                            <td class="text-center"><input type="radio" name="PreocupanConsecuencias" value="Generalmente no aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="PreocupanConsecuencias" value="Algunas veces aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="PreocupanConsecuencias" value="Por lo general aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="PreocupanConsecuencias" value="Aplicable" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tengo dificultad para quedarme dormido por las noches</td>
+                                            <td class="text-center"><input type="radio" name="TengoDificultad" value="No aplicable en lo absoluto" required></td>
+                                            <td class="text-center"><input type="radio" name="TengoDificultad" value="Generalmente no aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="TengoDificultad" value="Algunas veces aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="TengoDificultad" value="Por lo general aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="TengoDificultad" value="Aplicable" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Después de una mala noche, sufro de fatiga, somnolencia, mal humor, pobre concentración, problemas de memoria y falta de energía</td>
+                                            <td class="text-center"><input type="radio" name="MalaNoche" value="No aplicable en lo absoluto" required></td>
+                                            <td class="text-center"><input type="radio" name="MalaNoche" value="Generalmente no aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="MalaNoche" value="Algunas veces aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="MalaNoche" value="Por lo general aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="MalaNoche" value="Aplicable" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>A pesar de tener las suficientes oportunidades para dormir, no duermo lo suficiente</td>
+                                            <td class="text-center"><input type="radio" name="OportunidadesDormir" value="No aplicable en lo absoluto" required></td>
+                                            <td class="text-center"><input type="radio" name="OportunidadesDormir" value="Generalmente no aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="OportunidadesDormir" value="Algunas veces aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="OportunidadesDormir" value="Por lo general aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="OportunidadesDormir" value="Aplicable" required></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="swiper-slide mb-5">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center" scope="col">Enunciado</th>
+                                            <th class="text-center" scope="col">No aplicable</th>
+                                            <th class="text-center" scope="col">Generalmente no aplicable</th>
+                                            <th class="text-center" scope="col">Algunas veces aplicable</th>
+                                            <th class="text-center" scope="col">Por lo general aplicable</th>
+                                            <th class="text-center" scope="col">Aplicable</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Regularmente tengo sueños vividos en los que me atacan y trato de defenderme con mivimientos sin control</td>
+                                            <td class="text-center"><input type="radio" name="Regularmente" value="No aplicable en lo absoluto" required></td>
+                                            <td class="text-center"><input type="radio" name="Regularmente" value="Generalmente no aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="Regularmente" value="Algunas veces aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="Regularmente" value="Por lo general aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="Regularmente" value="Aplicable" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dejo de respirar durante el sueño</td>
+                                            <td class="text-center"><input type="radio" name="DejoDeRespirar" value="No aplicable en lo absoluto" required></td>
+                                            <td class="text-center"><input type="radio" name="DejoDeRespirar" value="Generalmente no aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="DejoDeRespirar" value="Algunas veces aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="DejoDeRespirar" value="Por lo general aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="DejoDeRespirar" value="Aplicable" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ronco fuerte mientras duermo</td>
+                                            <td class="text-center"><input type="radio" name="RoncoFuerte" value="No aplicable en lo absoluto" required></td>
+                                            <td class="text-center"><input type="radio" name="RoncoFuerte" value="Generalmente no aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="RoncoFuerte" value="Algunas veces aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="RoncoFuerte" value="Por lo general aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="RoncoFuerte" value="Aplicable" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Por las noches despierto con la sensación de que me estoy ahogando</td>
+                                            <td class="text-center"><input type="radio" name="EstoyAhogando" value="No aplicable en lo absoluto" required></td>
+                                            <td class="text-center"><input type="radio" name="EstoyAhogando" value="Generalmente no aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="EstoyAhogando" value="Algunas veces aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="EstoyAhogando" value="Por lo general aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="EstoyAhogando" value="Aplicable" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sufro de pesadillas o sueños desagradables</td>
+                                            <td class="text-center"><input type="radio" name="PesadillasDesagradables" value="No aplicable en lo absoluto" required></td>
+                                            <td class="text-center"><input type="radio" name="PesadillasDesagradables" value="Generalmente no aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="PesadillasDesagradables" value="Algunas veces aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="PesadillasDesagradables" value="Por lo general aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="PesadillasDesagradables" value="Aplicable" required></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="swiper-slide mb-5">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center" scope="col">Enunciado</th>
+                                            <th class="text-center" scope="col">No aplicable</th>
+                                            <th class="text-center" scope="col">Generalmente no aplicable</th>
+                                            <th class="text-center" scope="col">Algunas veces aplicable</th>
+                                            <th class="text-center" scope="col">Por lo general aplicable</th>
+                                            <th class="text-center" scope="col">Aplicable</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Debido al sueño insuficiente, no funciono tan bien durante el día</td>
+                                            <td class="text-center"><input type="radio" name="NoFuncionoDia" value="No aplicable en lo absoluto" required></td>
+                                            <td class="text-center"><input type="radio" name="NoFuncionoDia" value="Generalmente no aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="NoFuncionoDia" value="Algunas veces aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="NoFuncionoDia" value="Por lo general aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="NoFuncionoDia" value="Aplicable" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Me he lastimado durante el sueño y no tengo recuerdos del evento después.</td>
+                                            <td class="text-center"><input type="radio" name="MeHeLastimado" value="No aplicable en lo absoluto" required></td>
+                                            <td class="text-center"><input type="radio" name="MeHeLastimado" value="Generalmente no aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="MeHeLastimado" value="Algunas veces aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="MeHeLastimado" value="Por lo general aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="MeHeLastimado" value="Aplicable" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Me quedo dormido repetidamente a lo largo del día</td>
+                                            <td class="text-center"><input type="radio" name="DormidoRepetidamente" value="No aplicable en lo absoluto" required></td>
+                                            <td class="text-center"><input type="radio" name="DormidoRepetidamente" value="Generalmente no aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="DormidoRepetidamente" value="Algunas veces aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="DormidoRepetidamente" value="Por lo general aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="DormidoRepetidamente" value="Aplicable" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Frecuentemente despierto parcialmente y me encuentro moviende de manera violenta mis brazos. Por lo general no recuerdo esto más tarde</td>
+                                            <td class="text-center"><input type="radio" name="DespiertoParcialmente" value="No aplicable en lo absoluto" required></td>
+                                            <td class="text-center"><input type="radio" name="DespiertoParcialmente" value="Generalmente no aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="DespiertoParcialmente" value="Algunas veces aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="DespiertoParcialmente" value="Por lo general aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="DespiertoParcialmente" value="Aplicable" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Despues de una siesta durante el día, no me siento cansado</td>
+                                            <td class="text-center"><input type="radio" name="NoMeSientoCansado" value="No aplicable en lo absoluto" required></td>
+                                            <td class="text-center"><input type="radio" name="NoMeSientoCansado" value="Generalmente no aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="NoMeSientoCansado" value="Algunas veces aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="NoMeSientoCansado" value="Por lo general aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="NoMeSientoCansado" value="Aplicable" required></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="swiper-slide mb-5">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center" scope="col">Enunciado</th>
+                                            <th class="text-center" scope="col">No aplicable</th>
+                                            <th class="text-center" scope="col">Generalmente no aplicable</th>
+                                            <th class="text-center" scope="col">Algunas veces aplicable</th>
+                                            <th class="text-center" scope="col">Por lo general aplicable</th>
+                                            <th class="text-center" scope="col">Aplicable</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Duermo mal por que no puedo administrar el quedarme dormido en una hora normal y despertar a una hora normal por la mañana</td>
+                                            <td class="text-center"><input type="radio" name="NoPuedoAdm" value="No aplicable en lo absoluto" required></td>
+                                            <td class="text-center"><input type="radio" name="NoPuedoAdm" value="Generalmente no aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="NoPuedoAdm" value="Algunas veces aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="NoPuedoAdm" value="Por lo general aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="NoPuedoAdm" value="Aplicable" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cuando tengo que permanecer despierto por la nochem el sueño durante el día es malo</td>
+                                            <td class="text-center"><input type="radio" name="ElDiaEsMalo" value="No aplicable en lo absoluto" required></td>
+                                            <td class="text-center"><input type="radio" name="ElDiaEsMalo" value="Generalmente no aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="ElDiaEsMalo" value="Algunas veces aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="ElDiaEsMalo" value="Por lo general aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="ElDiaEsMalo" value="Aplicable" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Regularmente duermo más de 10 horas por la noche, tengo dificultad por despertarme por las mañanas y hago siestas durante el día</td>
+                                            <td class="text-center"><input type="radio" name="DuermoDiez" value="No aplicable en lo absoluto" required></td>
+                                            <td class="text-center"><input type="radio" name="DuermoDiez" value="Generalmente no aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="DuermoDiez" value="Algunas veces aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="DuermoDiez" value="Por lo general aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="DuermoDiez" value="Aplicable" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Durante el dia sufro de ataques de sueño que son tan severos que no puedo contenerme</td>
+                                            <td class="text-center"><input type="radio" name="AtaquesDeSueno" value="No aplicable en lo absoluto" required></td>
+                                            <td class="text-center"><input type="radio" name="AtaquesDeSueno" value="Generalmente no aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="AtaquesDeSueno" value="Algunas veces aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="AtaquesDeSueno" value="Por lo general aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="AtaquesDeSueno" value="Aplicable" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>La hora en la que me quedo dormido varia mucho de un dia para otro</td>
+                                            <td class="text-center"><input type="radio" name="DiaParaOtro" value="No aplicable en lo absoluto" required></td>
+                                            <td class="text-center"><input type="radio" name="DiaParaOtro" value="Generalmente no aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="DiaParaOtro" value="Algunas veces aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="DiaParaOtro" value="Por lo general aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="DiaParaOtro" value="Aplicable" required></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="swiper-slide mb-5">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center" scope="col">Enunciado</th>
+                                            <th class="text-center" scope="col">No aplicable</th>
+                                            <th class="text-center" scope="col">Generalmente no aplicable</th>
+                                            <th class="text-center" scope="col">Algunas veces aplicable</th>
+                                            <th class="text-center" scope="col">Por lo general aplicable</th>
+                                            <th class="text-center" scope="col">Aplicable</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Sufro de sonambulismo</td>
+                                            <td class="text-center"><input type="radio" name="Sonambulismo" value="No aplicable en lo absoluto" required></td>
+                                            <td class="text-center"><input type="radio" name="Sonambulismo" value="Generalmente no aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="Sonambulismo" value="Algunas veces aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="Sonambulismo" value="Por lo general aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="Sonambulismo" value="Aplicable" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Durante el día me quedo dormido de manera involuntaria, especialmente en situaciones monótonas</td>
+                                            <td class="text-center"><input type="radio" name="Monotonas" value="No aplicable en lo absoluto" required></td>
+                                            <td class="text-center"><input type="radio" name="Monotonas" value="Generalmente no aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="Monotonas" value="Algunas veces aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="Monotonas" value="Por lo general aplicable" required></td>
+                                            <td class="text-center"><input type="radio" name="Monotonas" value="Aplicable" required></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="center">
+                                <input type="submit" class="custom-btn" value="Completar">
+                              </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+
+
+    <script src="js/jquery-3.5.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="js/swiper.js"></script>
+    <script>
+
+        var forms = $('.needs-validation');
+
+        $('input:radio').click(function () {
+            var name = $(this).attr("name");
+            $("input:radio[name=" + name + "]").each(function () {
+                $(this).css({
+                    'border-color': 'gray'
+                });
+            });
+        });
+
+        const radios = () => {
+            $("input:radio").each(function () {
+                const name = $(this).attr('name');
+                if ($("input:radio[name=" + name + "]:checked").length == 0) {
+                    $(this).css({
+                        'border-color': 'red'
+                    });
+                }
+            });
+        }
+
+        const funValidation = (form) => {
+            form.addEventListener('submit', (event) => {
+                event.preventDefault();
+                event.stopPropagation();
+                radios();
+
+                imForm = $("#form").serializeArray();
+                console.log(imForm);
+                if (form.checkValidity()) {
+                    imForm = $("#form").serializeArray();
+                    $(imForm).each(function (index, item) {
+                        console.log(item.name, item.value);
+                    });
+                } else {
+                    $("#incomplete").modal('show');
+                }
+
+                form.classList.add('was-validated');
+            }, false);
+        };
+
+        var validation = Array.prototype.filter.call(forms, funValidation);
+
+        var swiper = new Swiper('.swiper-container', {
+            allowTouchMove: false,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '">' + (index + 1) + '</span>';
+                },
+            },
+        });
+    </script>
+</body>
+
+</html>
